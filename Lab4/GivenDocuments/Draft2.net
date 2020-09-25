@@ -1,0 +1,21 @@
+* C:\Users\jblan\Google Drive\Electronics Lab\Lab4\GivenDocuments\Draft2.asc
+R1 N002 N001 20000
+R2 N002 P001 5000
+R3 N002 P002 10000
+V4 N003 0 12
+V5 0 N005 12
+R4 N004 N002 10000
+R5 0 N004 100000
+V1 P003 0 SINE(0 5 7000) AC 1
+V2 P001 0 1.5
+V3 P002 0 0.5
+XU1 0 N002 N003 N005 N004 level.2 Avol=1Meg GBW=10Meg Slew=10Meg ilimit=25m rail=0 Vos=0 phimargin=45 en=0 enk=0 in=0 ink=0 Rin=500Meg
+R6 P004 P003 510
+C1 N001 P004 3n
+C2 P004 0 94n
+R7 N001 0 33k
+.tran 0.002
+;ac lin 50000 1000 7000
+.lib UniversalOpamps2.sub
+.backanno
+.end

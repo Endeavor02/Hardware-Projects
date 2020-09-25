@@ -1,0 +1,52 @@
+[KITE]
+msg1= Keithley Interactive Test Environment - Generated KITE Project File
+msg2= INI File Format, V9.0 SP1
+msg3= ** DO NOT EDIT **
+msg4= ** Assume All Values are CaSe SeNsItIvE!!! **
+[Miscellaneous]
+ReadOnly=FALSE
+NumberOfSites=1
+CurrentSite=1
+StartSite=1
+FinishSite=1
+NumberOfAppends=20
+[Status]
+RunStatus=0
+IsChecked=1
+[OpenTestsAndPlans]
+NodePath1=\2N222A_BJT#0@1
+NodeName1=2N222A_BJT
+NodeType1=0
+NodeUID1=0
+NodeStatus1=0
+NodeChecked1=1
+NodePath2=\subsites\BJT#0@1
+NodeName2=BJT
+NodeType2=2
+NodeUID2=0
+NodeStatus2=0
+NodeChecked2=1
+NodePath3=\devices\3terminal-npn-bjt#1@1
+NodeName3=3terminal-npn-bjt
+NodeType3=3
+NodeUID3=1
+NodeStatus3=0
+NodeChecked3=1
+NodePath4=\tests\vce-ic#1@1
+NodeName4=vce-ic
+NodeType4=4
+NodeUID4=1
+NodeStatus4=1
+NodeChecked4=0
+NodePath5=\tests\vce-ic-1x#1@1
+NodeName5=vce-ic-1x
+NodeType5=4
+NodeUID5=1
+NodeStatus5=1
+NodeChecked5=255
+[InitializationSteps]
+OnOff=Off
+[TerminationSteps]
+OnOff=Off
+[Subsite Plans]
+SSP1=\subsites\BJT.kss

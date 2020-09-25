@@ -1,0 +1,10 @@
+* C:\Users\jblan\Google Drive\Electronics Lab\Lab4\GivenDocuments\Lab_4_BJT_Curve_Trace_ (1).asc
+Q1 N001 N002 0 0 2N2222
+I1 0 N002 0
+V1 N001 0 0
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\jblan\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.dc V1 0 1.5 0.01 I1 0.0001 0.001 0.0001
+.backanno
+.end
