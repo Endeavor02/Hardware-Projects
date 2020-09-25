@@ -1,0 +1,5 @@
+* source LAB 3
+X_M4         N15724 N15354 N15693 2N7000/FAI
+V_V1         N15724 0 6Vdc
+V_V2         N15354 0 6Vdc
+R_R1         N15693 0  1k TC=0,0 
