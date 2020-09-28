@@ -1,0 +1,355 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 8464
+License: Customer
+
+Current time: 	Mon Sep 28 15:06:49 EDT 2020
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	jblan
+User home directory: C:/Users/jblan
+User working directory: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Vivado/Vivado
+HDI_APPROOT: D:/Vivado/Vivado/2020.1
+RDI_DATADIR: D:/Vivado/Vivado/2020.1/data
+RDI_BINDIR: D:/Vivado/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/jblan/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/jblan/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/jblan/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	D:/Vivado/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/vivado.log
+Vivado journal file location: 	C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/vivado.jou
+Engine tmp dir: 	C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/.Xil/Vivado-8464-DESKTOP-01QOJF7
+
+Xilinx Environment Variables
+----------------------------
+AMDRMSDKPATH: C:\Program Files\AMD\RyzenMasterSDK\
+XILINX: D:/Vivado/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: D:/Vivado/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/Vivado/2020.1
+XILINX_VIVADO: D:/Vivado/Vivado/2020.1
+XILINX_VIVADO_HLS: D:/Vivado/Vivado/2020.1
+
+
+GUI allocated memory:	195 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,016 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\jblan\Documents\GitHub\Hardware-Projects\Processor Design\Processor.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/jblan/Google Drive/Vivado/Processor' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 107 MB (+110152kb) [00:00:06]
+// [Engine Memory]: 1,016 MB (+913779kb) [00:00:06]
+// WARNING: HEventQueue.dispatchEvent() is taking  1658 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'. 
+// Project name: Processor; location: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design; part: xc7k70tfbv676-1
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// HMemoryUtils.trashcanNow. Engine heap size: 1,016 MB. GUI used memory: 63 MB. Current time: 9/28/20, 3:06:50 PM EDT
+// [GUI Memory]: 119 MB (+6985kb) [00:00:09]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Processor"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Elapsed time: 67 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Instruction_NOT"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Instruction_"); // ac (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Instruction_ADC"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Instruction_"); // ac (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Instruction_JPA"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Instrcution_INCA"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Instruction_STA"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Instruction_LDA"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 121 seconds
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// bz (cs):  Add Sources  : addNotify
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Command: 'file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new'
+// Tcl Message: file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new 
+// Tcl Message: file mkdir {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new} 
+// Tcl Message: close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_LDA.v} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_LDA.v}} 
+// Tcl Message: close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_STA.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_STA.v}} 
+// Tcl Message: close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instrcution_INCA.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instrcution_INCA.v}} 
+// Tcl Message: close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Processor.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Processor.v}} 
+// Tcl Message: close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_ADC.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_ADC.v}} 
+// Tcl Message: close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_NOT.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_NOT.v}} 
+// Tcl Message: close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_JPA.v} w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_JPA.v}} 
+// I (cs): Define Modules: addNotify
+dismissDialog("Add Sources"); // bz (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Modules"); // I (cs)
+// [GUI Memory]: 126 MB (+898kb) [00:02:25]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
