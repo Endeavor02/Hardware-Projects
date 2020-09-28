@@ -446,3 +446,5 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project
 closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
 selectCodeEditor("Processor.v", 287, 120); // bP (w, cs)
 selectCodeEditor("Processor.v", 418, 359); // bP (w, cs)
+// Elapsed time: 104 seconds
+selectCodeEditor("Processor.v", 97, 366); // bP (w, cs)
