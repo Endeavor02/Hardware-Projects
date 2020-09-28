@@ -1,0 +1,9 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/RippleCarryAdder.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/RippleCarryAdder.srcs/sim_1/imports/new/testbench.v,1601094827,verilog,,,,testbench,,,,,,,,
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/RippleCarryAdder.srcs/sources_1/imports/Downloads/RippleCarryAdder.v,1601094485,verilog,,C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/RippleCarryAdder.srcs/sources_1/imports/Downloads/fullAdder.v,,RippleCarryAdder,,,,,,,,
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/RippleCarryAdder.srcs/sources_1/imports/Downloads/fullAdder.v,1601251169,verilog,,C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/RippleCarryAdder.srcs/sources_1/imports/Downloads/halfAdder.v,,fullAdder_,,,,,,,,
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/RippleCarryAdder.srcs/sources_1/imports/Downloads/halfAdder.v,1601251205,verilog,,C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/RippleCarryAdder.srcs/sim_1/imports/new/testbench.v,,halfAdder,,,,,,,,

@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Google Drive/Vivado/LookAheadAdder/LookAheadAdder.srcs/sources_1/new/SixtyFourBit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SixtyFourBit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Google Drive/Vivado/LookAheadAdder/LookAheadAdder.srcs/sources_1/new/TwoBitLookAhead.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TwoBitLookAhead
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Google Drive/Vivado/LookAheadAdder/LookAheadAdder.srcs/sim_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

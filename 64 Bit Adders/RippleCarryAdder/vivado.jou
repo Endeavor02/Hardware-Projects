@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Sep 28 13:40:02 2020
+# Process ID: 11160
+# Current directory: C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1624 C:\Users\jblan\Documents\GitHub\Hardware-Projects\64 Bit Adders\RippleCarryAdder\RippleCarryAdder.xpr
+# Log file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/vivado.log
+# Journal file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project -part xc7k70tfbv676-1 {C:/Users/jblan/Documents/GitHub/Hardware-Projects/64 Bit Adders/RippleCarryAdder/RippleCarryAdder.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench.tcl
+close_sim
+close_project
+open_project -part xc7k70tfbv676-1 {C:/Users/jblan/Google Drive/Vivado/LookAheadAdder/LookAheadAdder.xpr}
+update_compile_order -fileset sources_1
