@@ -105,3 +105,9 @@ add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/P
 close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_JPA.v} w ]
 add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_JPA.v}}
 update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Processor [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
