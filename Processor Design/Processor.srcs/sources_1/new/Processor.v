@@ -10,5 +10,8 @@ output reg [11:0]PC, MA;
 //############################
 always @ (posedge CLK) begin
 
+//If 
+
+
 end
 endmodule
