@@ -353,3 +353,96 @@ dismissDialog("Define Modules"); // I (cs)
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_GRAPH_STALE
+// Elapsed time: 469 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false); // B (F, cs)
+selectCodeEditor("Processor.v", 136, 123); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Instruction_LDA (Instruction_LDA.v)]", 8, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Instruction_LDA (Instruction_LDA.v)]", 8, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("Instruction_LDA.v", 121, 440); // bP (w, cs)
+typeControlKey((HResource) null, "Instruction_LDA.v", 'c'); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("Processor.v", 258, 424); // bP (w, cs)
+typeControlKey((HResource) null, "Processor.v", 'v'); // bP (w, cs)
+selectCodeEditor("Processor.v", 155, 18); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_JPA.v]", 4, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Processor.v]", 7, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SrcMenu_REFRESH_HIERARCHY, "Refresh Hierarchy"); // ai (ao, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Processor (Processor.v)]", 8, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top Processor [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 133 MB (+535kb) [00:10:40]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Instruction_LDA (Instruction_LDA.v)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Instruction_LDA (Instruction_LDA.v)]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_STA.v]", 6, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_STA.v]", 6, false, false, false, false, false, true); // B (F, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("Instruction_STA.v", 285, 208); // bP (w, cs)
+typeControlKey((HResource) null, "Instruction_STA.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_NOT.v]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_NOT.v]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("Instruction_NOT.v", 196, 18); // bP (w, cs)
+typeControlKey((HResource) null, "Instruction_NOT.v", 'v'); // bP (w, cs)
+selectCodeEditor("Instruction_NOT.v", 154, 15); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_JPA.v]", 4, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_JPA.v]", 4, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_JPA.v]", 4, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_JPA.v]", 4, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("Instruction_JPA.v", 205, 89); // bP (w, cs)
+typeControlKey((HResource) null, "Instruction_JPA.v", 'v'); // bP (w, cs)
+selectCodeEditor("Instruction_JPA.v", 156, 8); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_ADC.v]", 3, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instruction_ADC.v]", 3, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("Instruction_ADC.v", 122, 29); // bP (w, cs)
+typeControlKey((HResource) null, "Instruction_ADC.v", 'v'); // bP (w, cs)
+selectCodeEditor("Instruction_ADC.v", 149, 14); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instrcution_INCA.v]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, Instrcution_INCA.v]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("Instrcution_INCA.v", 208, 70); // bP (w, cs)
+typeControlKey((HResource) null, "Instrcution_INCA.v", 'v'); // bP (w, cs)
+selectCodeEditor("Instrcution_INCA.v", 157, 5); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Instrcution_INCA.v", 286, 127); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Processor.v", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m (l, cs)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectCodeEditor("Processor.v", 287, 120); // bP (w, cs)
+selectCodeEditor("Processor.v", 418, 359); // bP (w, cs)
