@@ -2,115 +2,18 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Sep 28 15:06:38 2020
-# Process ID: 8464
+# Start of session at: Mon Sep 28 15:28:03 2020
+# Process ID: 10304
 # Current directory: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20208 C:\Users\jblan\Documents\GitHub\Hardware-Projects\Processor Design\Processor.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21760 C:\Users\jblan\Documents\GitHub\Hardware-Projects\Processor Design\Processor.xpr
 # Log file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/vivado.log
 # Journal file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Users/jblan/Google Drive/Vivado/Processor' since last save.
 Scanning sources...
 Finished scanning sources
-WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1', nor could it be found using path 'C:/Users/jblan/Google Drive/Vivado/Processor/Processor.srcs/sources_1'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new
-file mkdir {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new}
-close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_LDA.v} w ]
-add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_LDA.v}}
-close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_STA.v} w ]
-add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_STA.v}}
-close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instrcution_INCA.v} w ]
-add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instrcution_INCA.v}}
-close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Processor.v} w ]
-add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Processor.v}}
-close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_ADC.v} w ]
-add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_ADC.v}}
-close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_NOT.v} w ]
-add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_NOT.v}}
-close [ open {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_JPA.v} w ]
-add_files {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sources_1/new/Instruction_JPA.v}}
-update_compile_order -fileset sources_1
-set_property top Processor [current_fileset]
 update_compile_order -fileset sources_1
