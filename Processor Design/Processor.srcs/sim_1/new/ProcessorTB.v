@@ -26,7 +26,9 @@ module ProcessorTB;
 reg CLK, reset;
 wire [15:0]IR, MD, AC;
 wire [11:0]PC, MA;
-Processor TB(.CLK(CLK), .reset(reset), .IR(IR), .MD(MD), .AC(AC), .PC(PC), .MA(MA));
+wire [15:0]MEM_BUS_READ, MEM_BUS_WRITE;
+MemoryController mmc(.MEM_BUS_READ(MEM_BUS_READ), .MEM_BUS_WRITE(MEM_BUS_WRITE));
+Processor TB(.CLK(CLK), .reset(reset), .IR(IR), .MD(MD), .AC(AC), .PC(PC), .MA(MA), .MEM_BUS_READ(MEM_BUS_READ), .MEM_BUS_WRITE(MEM_BUS_WRITE));
 initial begin
 CLK = 1;
 reset = 0;
