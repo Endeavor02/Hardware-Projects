@@ -1,7 +1,15 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../Processor.srcs/sources_1/new/Instrcution_INCA.v" \
+"../../../../Processor.srcs/sources_1/new/Instruction_ADC.v" \
+"../../../../Processor.srcs/sources_1/new/Instruction_JPA.v" \
+"../../../../Processor.srcs/sources_1/new/Instruction_LDA.v" \
+"../../../../Processor.srcs/sources_1/new/Instruction_NOT.v" \
+"../../../../Processor.srcs/sources_1/new/Instruction_STA.v" \
 "../../../../Processor.srcs/sources_1/new/MemoryController.v" \
 "../../../../Processor.srcs/sources_1/new/Processor.v" \
+"../../../../Processor.srcs/sources_1/imports/Downloads/halfAdder.v" \
+"../../../../Processor.srcs/sources_1/imports/Downloads/fullAdder.v" \
 "../../../../Processor.srcs/sim_1/new/ProcessorTB.v" \
 
 # compile glbl module
