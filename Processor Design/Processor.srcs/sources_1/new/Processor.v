@@ -33,12 +33,16 @@ initial begin
 MA = 12'b000000000000;
 AC = 16'b0000000000000000;
 MD = 16'b0000000000000000;
-IR = 12'b000000000000;
+IR = 16'b0000000000000000;
 PC = 12'b000000000000;
 
 //Set initial state to S00
 PreviousState = S00;
 NextState = S00;
+
+//Set initial Memory write and control to 0.
+MEM_BUS_WRITE = 16'b0000000000000000;
+MEM_BUS_CONTROL = 1'b0;
 end
 //############################
 // Each clock cycle, execute commands.
@@ -48,6 +52,8 @@ always @ (posedge CLK) begin
 case(NextState)
 //Step 1: Fetch an instruction from memory.
     S00: begin
+    //Turn off memory control
+    MEM_BUS_CONTROL = 1'b0;
     //Access memory at the Program Counter index to ensure the correct instruction is retrieved
     MA <= PC;
     //Load the instruction into the Instruction Register
@@ -67,7 +73,7 @@ case(NextState)
         3'b010: begin //JPA?
         PreviousState = S01;
         NextState = S00;
-            if(AC[15] == 1'b1 && AC > 16'b0000000000000000)begin //Check Greater Than 0
+            if(AC[15] == 1'b0 && AC > 16'b0000000000000000)begin //Check Greater Than 0
                 if(IR[12] == 1)begin
                   PreviousState = S01;
                   NextState = S04;
@@ -90,8 +96,42 @@ case(NextState)
     end
     
 //Step 3: Execute
-    S08:begin
+    S02:begin
+    AC <= ~AC;
+    PreviousState = S02;
+    NextState = S00;
+    MA <= PC;
+    end
+    S03: begin
+    AC <= (AC + 16'b0000000000000001);
+    PreviousState = S03;
+    NextState = S00;
+    MA <= PC;
+    end
+    S04: begin
     MA <= IR;
+    PreviousState = S04;
+    NextState = S05;
+    end
+    S05: begin
+    MD <= MEM_BUS_READ;
+    PreviousState = S05;
+    NextState = S06;
+    end
+    S06: begin
+    PC <= MD;
+    PreviousState = S06;
+    NextState = S00;
+    MA <= PC;
+    end
+    S07: begin
+    PC <= IR;
+    PreviousState = S07;
+    NextState = S00;
+    MA <= PC;
+    end
+    S08:begin
+    MA <= IR[11:0];
         case(IR[15:13])
         3'b100: begin //STA
             if(IR[12] == 1)begin //Check Access Mode
@@ -109,89 +149,98 @@ case(NextState)
         end
         endcase
     end
+    S09:begin
+    MD <= MEM_BUS_READ;
+    PreviousState<= S09;
+    NextState <= S10;
+    end
+    S10:begin
+    MA <= MD;
+    PreviousState<= S10;
+    NextState <= S11;
+    end
+    S11:begin
+    MEM_BUS_WRITE <= AC;
+    MEM_BUS_CONTROL <= 1'b1;
+    AC <= 16'b0000000000000000;
+    PreviousState<= S11;
+    NextState <= S17;
+    end
     S12:begin
-    MD <= MEM_BUS_READ[MA];
-    
+    MD <= MA;
     case(IR[12])
     1'b1: begin
+        PreviousState <= S12;
+        NextState <= S13;
     end
     1'b0: begin
     end
     endcase
-    
-    if(IR[12] == 1)begin
+        case(IR[15:13])
+        3'b001:begin //ADC
         PreviousState <= S12;
-        NextState <= S13;
+        NextState <= S15;
+        end
+        3'b101:begin //LDA
+            case(IR[12])
+            1'b1:begin
+            PreviousState <= S12;
+            NextState <= S13;
+            end
+            1'b0:begin
+            PreviousState <= S12;
+            NextState <= S16;
+            end
+            endcase
+        end
+        default: begin //Bad Instruction, go back to S00
+        PreviousState <= S12;
+        NextState <= S00;
+        MA <= PC;
+        end
+        endcase
     end
-    if(IR[12] == 0)begin
-        
+    S13:begin
+    MA <= MD;
+    PreviousState <= S13;
+    NextState <= S14;
     end
+    S14:begin
+    MD <= MEM_BUS_READ;
+        case(IR[15:13])
+        3'b001:begin //ADC
+        PreviousState <= S14;
+        NextState <= S15;
+        end
+        3'b101:begin //LDA
+        PreviousState <= S14;
+        NextState <= S16;
+        end
+        default: begin //Bad Instruction, go back to S00
+        PreviousState <= S14;
+        NextState <= S00;
+        end
+        endcase
     end
-
-//Step 4: Store
-
-
+    S15:begin
+    AC <= AC + MD;
+    PreviousState <= S15;
+    NextState <= S00;
+    MA <= PC;
+    end
+    S16:begin
+    AC <= MD;
+    PreviousState <= S16;
+    NextState <= S00;
+    MA <= PC;
+    end
+    S17:begin
+    PreviousState<= S17;
+    NextState <= S00;
+    MA <= PC;
+    end
     default: ; //do nothing, something went very wrong.
 endcase
 
-
-
-
-
-
-
-
-
-
-
-
-//
-// Everything Below this is wrong.
-// 
-/*
-case(IR[15:13]) //determines function based on OP code of the Instruction Register
-3'b000: AC <= ~AC;//NOT Function
-3'b001: begin//ADC Function
-    //Updates the Memory Address register with our new Memory Address
-    MA <= IR[11:0];
-    case(IR[12]) //Check the addressing mode
-    1'b0: begin //Direct Addressing Mode
-    AC[11:0] <= MA;
-    end
-    1'b1: begin //Indirect Addressing Mode
-    //Reads the data from the bus and inserts it into the MD register.
-    MD <= MEM_BUS_READ;
-    //Now to compute 12-bit Addition with carry
-    AC = AC+MD; //fix this!
-############ TO-DO!
-############        
-        end 
-   endcase
-end 
-3'b010:begin//JPA Function
-//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-//
-//  TO-DO!
-//
-//
-//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-end
-3'b011: begin//INCA Function
-AC <= AC + 1'b0000000000000001;
-end
-3'b100: begin//STA Function
-//Set the memory address as the one supplied in the instruction.
-MA <= IR[11:0];
-MEM_BUS_WRITE = AC;
-MEM_BUS_CONTROL = 1;
-AC <= 16'b0000000000000000;
-end
-
-3'b101: begin//LDA Function
-
-end
-default: ;//Otherwise do nothing. Bad Register value.
-endcase
-MEM_BUS_CONTROL = 0; */
 end
 endmodule
