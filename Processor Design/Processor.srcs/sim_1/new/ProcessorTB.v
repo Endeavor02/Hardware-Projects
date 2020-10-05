@@ -25,7 +25,7 @@ module ProcessorTB;
 
 reg CLK, reset;
 wire MEM_BUS_CONTROL;
-reg [15:0]IR; 
+wire [15:0]IR; 
 wire [15:0]MD, AC;
 wire [11:0]PC, MA;
 wire [15:0]MEM_BUS_READ;
@@ -46,7 +46,6 @@ Processor TB(
 );
 initial begin
 reset = 0;
-IR = 16'b0011000000000001;
 CLK =0;
 #1
     for(integer i=0;i<64;i=i+1)

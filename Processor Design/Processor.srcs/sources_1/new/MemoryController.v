@@ -32,7 +32,7 @@ output reg [15:0]MEM_BUS_READ;
 //initial memory values
 initial begin
 memory[0] = 16'b0000000000000000;
-memory[1] = 16'b0000000000000111;
+memory[1] = 16'b0000000000000000;
 memory[2] = 16'b0000000000000000;
 memory[3] = 16'b0000000000000000;
 memory[4] = 16'b0000000000000000;
