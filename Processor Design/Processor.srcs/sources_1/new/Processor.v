@@ -122,13 +122,13 @@ case(NextState)
     PC <= MD;
     PreviousState = S06;
     NextState = S00;
-    MA <= PC;
+    MA <= MD;
     end
     S07: begin
     PC <= IR;
     PreviousState = S07;
     NextState = S00;
-    MA <= PC;
+    MA <= IR;
     end
     S08:begin
     MA <= IR[11:0];
