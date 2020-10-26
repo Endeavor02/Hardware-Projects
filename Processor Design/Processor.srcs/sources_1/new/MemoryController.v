@@ -51,7 +51,7 @@ MEM_BUS_READ <= memory[0]; //set initial value
 ASSEMBLY CODE FOR ABOVE:
 main_   ADC #0xFFF
         INCA
-        NOT
+        NOT 
         STA #0xB
         LDA #0xB
         NOT
@@ -60,7 +60,7 @@ main_   ADC #0xFFF
         NOT
         NOT
         JPA reset
-reset   jpa main_
+reset   JPA main_
 */
 end
 
