@@ -1,8 +1,13 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+<<<<<<< HEAD
 | Date         : Sun Oct 25 22:39:30 2020
 | Host         : LAPTOP-V6JJOPEA running 64-bit major release  (build 9200)
+=======
+| Date         : Sun Oct 25 22:17:26 2020
+| Host         : DESKTOP-01QOJF7 running 64-bit major release  (build 9200)
+>>>>>>> 81802a8211efde411b1e16228c53adafa7403946
 | Command      : report_utilization -file Processor_utilization_synth.rpt -pb Processor_utilization_synth.pb
 | Design       : Processor
 | Device       : 7k70tfbv676-1
@@ -30,8 +35,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  100 |     0 |     41000 |  0.24 |
-|   LUT as Logic          |  100 |     0 |     41000 |  0.24 |
+| Slice LUTs*             |  102 |     0 |     41000 |  0.25 |
+|   LUT as Logic          |  102 |     0 |     41000 |  0.25 |
 |   LUT as Memory         |    0 |     0 |     13400 |  0.00 |
 | Slice Registers         |   94 |     0 |     82000 |  0.11 |
 |   Register as Flip Flop |   94 |     0 |     82000 |  0.11 |
@@ -153,13 +158,13 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     |   93 |        Flop & Latch |
 | OBUF     |   89 |                  IO |
-| LUT6     |   42 |                 LUT |
+| LUT6     |   45 |                 LUT |
 | LUT5     |   36 |                 LUT |
-| LUT3     |   19 |                 LUT |
+| LUT3     |   17 |                 LUT |
 | IBUF     |   17 |                  IO |
 | LUT4     |    7 |                 LUT |
 | CARRY4   |    7 |          CarryLogic |
-| LUT2     |    6 |                 LUT |
+| LUT2     |    5 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+

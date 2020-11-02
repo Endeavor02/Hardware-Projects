@@ -45,7 +45,7 @@ memory[11] = 16'b0000000000000000;
 memory[12] = 16'b0000000000000000;
 memory[13] = 16'b0000000000000000;
 memory[14] = 16'b0000000000000000;
-memory[15] = 16'b0101000000000000; //JPA, Jump to Memory 0 (0x0)
+memory[15] = 16'b0101000000000000; //JPA, Jump to Memory 0 (0x0) 
 MEM_BUS_READ <= memory[0]; //set initial value
 /*
 ASSEMBLY CODE FOR ABOVE:

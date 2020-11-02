@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
+<<<<<<< HEAD
 	<Run Id="synth_1" LaunchDir="C:/Users/abole/Documents/GitHub/Hardware-Projects/Processor Design/Processor.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+=======
+	<Run Id="synth_1" LaunchDir="C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+>>>>>>> 81802a8211efde411b1e16228c53adafa7403946
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
 		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>

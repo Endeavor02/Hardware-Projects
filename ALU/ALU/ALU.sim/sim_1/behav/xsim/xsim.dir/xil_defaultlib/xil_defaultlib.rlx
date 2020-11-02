@@ -1,0 +1,9 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/ALU/ALU/ALU.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/ALU/ALU/ALU.srcs/sim_1/new/TB.v,1603998758,verilog,,,,TB,,,,,,,,
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/ALU/ALU/ALU.srcs/sources_1/new/ADDER.v,1603995937,verilog,,,,ADDER,,,,,,,,
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/ALU/ALU/ALU.srcs/sources_1/new/ALU.v,1603998661,verilog,,C:/Users/jblan/Documents/GitHub/Hardware-Projects/ALU/ALU/ALU.srcs/sim_1/new/TB.v,,ALU,,,,,,,,
+C:/Users/jblan/Documents/GitHub/Hardware-Projects/ALU/ALU/ALU.srcs/sources_1/new/FullAdder.v,1603995436,verilog,,C:/Users/jblan/Documents/GitHub/Hardware-Projects/ALU/ALU/ALU.srcs/sources_1/new/ADDER.v,,FullAdder,,,,,,,,
