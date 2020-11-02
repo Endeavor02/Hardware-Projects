@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/abole/Documents/GitHub/Hardware-Projects/Processor Design/Processor.sim/sim_1/impl/func/xsim/ProcessorTB_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Processor
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/abole/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sim_1/new/ProcessorTB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProcessorTB
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/Users/abole/Documents/GitHub/Hardware-Projects/Processor Design/Processor.srcs/sim_1/new/ProcessorTB.v:51]

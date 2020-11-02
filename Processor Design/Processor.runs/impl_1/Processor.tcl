@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.runs/impl_1/Processor.tcl"
+  variable script "C:/Users/abole/Documents/GitHub/Hardware-Projects/Processor Design/Processor.runs/impl_1/Processor.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,10 +123,10 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
   reset_param project.defaultXPMLibraries 
-  open_checkpoint {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.runs/impl_1/Processor.dcp}
-  set_property webtalk.parent_dir {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.cache/wt} [current_project]
-  set_property parent.project_path {C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.xpr} [current_project]
-  set_property ip_output_repo {{C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor Design/Processor.cache/ip}} [current_project]
+  open_checkpoint {C:/Users/abole/Documents/GitHub/Hardware-Projects/Processor Design/Processor.runs/impl_1/Processor.dcp}
+  set_property webtalk.parent_dir {C:/Users/abole/Documents/GitHub/Hardware-Projects/Processor Design/Processor.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/abole/Documents/GitHub/Hardware-Projects/Processor Design/Processor.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/abole/Documents/GitHub/Hardware-Projects/Processor Design/Processor.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
