@@ -65,7 +65,7 @@ ALUOp <= 4'b1100; // NOR
 CLK <= 1;
 #1
 CLK = 0;
-ALUOp <= 0001; //IR
+ALUOp <= 4'b0001; //OR
 #1
 CLK <= 1;
 #1
