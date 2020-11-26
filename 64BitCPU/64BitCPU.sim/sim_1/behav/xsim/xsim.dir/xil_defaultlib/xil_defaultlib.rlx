@@ -1,9 +1,0 @@
-0.7
-2020.1
-May 27 2020
-20:09:33
-C:/Users/jblan/Documents/GitHub/Hardware-Projects/64BitCPU/64BitCPU.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
-C:/Users/jblan/Documents/GitHub/Hardware-Projects/64BitCPU/64BitCPU.srcs/sim_1/new/CPUTB.v,1606342702,verilog,,,,CPUTB,,,,,,,,
-C:/Users/jblan/Documents/GitHub/Hardware-Projects/64BitCPU/64BitCPU.srcs/sources_1/imports/new/ALU.v,1604348025,verilog,,C:/Users/jblan/Documents/GitHub/Hardware-Projects/64BitCPU/64BitCPU.srcs/sources_1/new/CPU.v,,ALU,,,,,,,,
-C:/Users/jblan/Documents/GitHub/Hardware-Projects/64BitCPU/64BitCPU.srcs/sources_1/new/CPU.v,1606341882,verilog,,C:/Users/jblan/Documents/GitHub/Hardware-Projects/64BitCPU/64BitCPU.srcs/sources_1/new/Memory.v,,CPU,,,,,,,,
-C:/Users/jblan/Documents/GitHub/Hardware-Projects/64BitCPU/64BitCPU.srcs/sources_1/new/Memory.v,1606342499,verilog,,C:/Users/jblan/Documents/GitHub/Hardware-Projects/64BitCPU/64BitCPU.srcs/sim_1/new/CPUTB.v,,Memory,,,,,,,,
