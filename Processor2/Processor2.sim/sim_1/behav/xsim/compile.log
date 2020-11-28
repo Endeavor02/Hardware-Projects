@@ -12,6 +12,9 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Har
 INFO: [VRFC 10-311] analyzing module REG_TB
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CPU_TB
-ERROR: [VRFC 10-2934] 'MemRead' is already declared [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:25]
-WARNING: [VRFC 10-3703] second declaration of 'MemRead' ignored [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:25]
-ERROR: [VRFC 10-2865] module 'CPU_TB' ignored due to previous errors [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:23]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB

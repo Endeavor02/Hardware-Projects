@@ -22,10 +22,10 @@
 
 module CPU_TB;
 reg CLK;
-wire zero, MemWrite, MemRead, Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp1,ALUOp0;
+wire zero;
 wire[4:0] RegIn2;
 wire[7:0] State;
-wire[63:0] PC, Instruction, RegReadData1, RegReadData2, RegWriteData, ALUin2, ALUResult, DMWriteData, DMDataRead;
+wire[63:0] PC, RegReadData1, RegReadData2, RegWriteData, ALUin2, ALUResult, DMWriteData, DMDataRead;
 CPU processor(CLK, PC, State, RegReadData1, RegReadData2, RegIn2, RegWriteData, ALUin2, ALUResult, zero, DMWriteData, DMDataRead);
 
 integer i;
