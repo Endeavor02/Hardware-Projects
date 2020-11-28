@@ -20,6 +20,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+//*********************************************************************************
+//  This File has been verified to work as intended via REG_TB.v
+//
+//  Function 1:
+//  Input: Two registers to read from (RegIn1 and RegIn2)
+//  Output: The value of the registers specified (RegReadData1 and RegReadData2 respectively)
+//  Indepenant of clock (CLK)
+//
+//  Function 2:
+//  Input: A Write Control Flag (RegWriteControl), a register number to write to (RegWriteNum),
+//  data to write to the specified register (RegWriteData), and a clock signal (CLK)
+//  Output: None. The register will be written to, this can be verified by using the first function.
+//
+//  As of 11/27/2020 by Jeffrey Blanda
+//*********************************************************************************
+
+
 module Registers(
 RegWriteControl,
 RegWriteData,
@@ -34,17 +51,17 @@ input wire [4:0]RegIn1,RegIn2,RegWriteNum;
 output wire [63:0]RegReadData1,RegReadData2;
 input wire [63:0]RegWriteData;
 input wire CLK;
-reg[63:0] registers[4:0];
+reg[63:0] registers[31:0];
 initial begin
 registers[0] = 'h00000000;
-registers[1] = 'h00000000;
-registers[2] = 'h00000000;
-registers[3] = 'h00000000;
-registers[4] = 'h00000000;
-registers[5] = 'h00000000;
+registers[1] = 'hffffffff;
+registers[2] = 'h00000002;
+registers[3] = 'h00000003;
+registers[4] = 'h00000004;
+registers[5] = 'h0000e00f;
 registers[6] = 'h00000000;
-registers[7] = 'h00000000;
-registers[8] = 'h00000000;
+registers[7] = 'hffffffff;
+registers[8] = 'h11111111;
 registers[9] = 'h00000000;
 registers[10] = 'h00000000;
 registers[11] = 'h00000000;

@@ -19,6 +19,17 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+//*********************************************************************************
+//  This File has been verified to work as intended via TB.v
+//
+//  Input: Two 64-bit Inputs (a,b), an ALU Control Signal (ALUControl), and a clock signal.
+//  Output: ALUResult, the result of the operation specified by ALUControl as pre-defined
+//  in the project criteria and zero, which is a single bit high when ALUResult == 0, and
+//  low otherwise.
+//
+//  As of 11/14/2020 by Jeffrey Blanda
+//*********************************************************************************
+
 
 module ALU(a, b, ALUControl, ALUresult, zero, CLK);
 output reg [63:0]ALUresult;     //Result

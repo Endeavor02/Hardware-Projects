@@ -20,15 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CPU(
-input wire CLK
-    );
-reg[7:0] State;
-reg[63:0] PC;
+module CPU(CLK, PC, State, RegReadData1, RegReadData2, RegIn2, RegWriteData, ALUin2, ALUResult, zero, DMWriteData, DMDataRead);
+input wire CLK;
+output reg[7:0] State;
+output reg[63:0] PC;
 reg Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp1,ALUOp0;
 reg[3:0] ALUControl;
 reg[10:0] OpCode;
-parameter IM_State='h0, R_State='h1, ALU_State='h2, DM_State='h3;
+parameter InstructionFetch_State='h0, Register_State='h1, ALU_State='h2, DataAccess_State='h3, Register_State2='h4;
 //Add Instruction Memory:
 wire [63:0]Instruction;
 InstructionMemory IM(
@@ -41,12 +40,11 @@ InstructionMemory IM(
 
 
 //Add Registers file:
-reg RegWriteControl;
-reg[63:0] RegWriteData;
-reg[4:0] RegIn2;
-wire[63:0] RegReadData1,RegReadData2;
+output reg[63:0] RegWriteData;
+output reg[4:0] RegIn2;
+output wire[63:0] RegReadData1,RegReadData2;
 Registers register(
-.RegWriteControl(RegWriteControl),
+.RegWriteControl(RegWrite),
 .RegWriteData(RegWriteData),
 .RegIn1(Instruction[9:5]),
 .RegIn2(RegIn2),
@@ -61,9 +59,9 @@ Registers register(
 
 
 //Add ALU:
-reg[63:0] ALUin2;
-wire[63:0] ALUResult;
-wire zero;
+output reg[63:0] ALUin2;
+output wire[63:0] ALUResult;
+output wire zero;
 ALU ALU(
 .a(RegReadData1), 
 .b(ALUin2), 
@@ -79,22 +77,21 @@ ALU ALU(
 
 
 //Add Data Memory:
-reg[63:0] DMWriteData;
-reg MemWrite, MemRead;
-wire[63:0] DMDataRead;
-DataMemory DM(.Address(ALURsult),.WriteData(RegReadData2),.MemWrite(MemWrite),.MemRead(MemRead),.DataRead(DMDataRead), .CLK(CLK));
+output reg[63:0] DMWriteData;
+output wire[63:0] DMDataRead;
+DataMemory DM(.Address(ALUResult),.WriteData(RegReadData2),.MemWrite(MemWrite),.MemRead(MemRead),.DataRead(DMDataRead), .CLK(CLK));
 
 // Address will be the address input to read or write data to/from
 // WriteData will be the data to write if the MemWrite flag is high
 // DMDataRead will be the data to read if the MemRead flag is high
 
 initial begin
-State = IM_State;
+State = InstructionFetch_State;
 PC = 'h00000000;
 end
 always @(posedge CLK) begin
 case(State)
-    IM_State: begin
+    InstructionFetch_State: begin
     //We've retrieved the Instruction as of this clock cycle. Setting Flags...
     Reg2Loc <= Instruction[63];
     ALUSrc <= Instruction[62];
@@ -105,14 +102,17 @@ case(State)
     Branch <= Instruction[57];
     ALUOp1 <= Instruction[56];
     ALUOp0 <= Instruction[55];
+    //Selecting OpCode part from the instruction
     OpCode <= Instruction[54:44];
-    State = R_State;
+    //Setting the next state
+    State <= Register_State;
+        //Determine the input to Read Register 2 (2x1 MUX Simulation)
         case(Instruction[63])
-        1'b0: RegIn2 <= Instruction[20:16];
-        1'b1: RegIn2 <= Instruction[4:0];
+        1'b0: RegIn2 <= Instruction[20:16]; //set to Rm
+        1'b1: RegIn2 <= Instruction[4:0]; //set to Rd
         endcase
     end
-    R_State: begin
+    Register_State: begin
     //Set ALU Control Signal...
         case(ALUOp1)
             1'b0: begin
@@ -148,13 +148,44 @@ case(State)
                 endcase
             end
         endcase
+        //Need to determine the second ALU input:
+        case(ALUSrc)
+            1'b0: begin //Input should be Read Data 2
+            ALUin2 <= RegReadData2;
+            end
+            1'b1: begin //Input should be Sign Extended Instruction [31:0]
+            ALUin2 <= ('h00000000 + Instruction[31:0]);
+            end
+        endcase
     State <= ALU_State;
     end
     ALU_State: begin
-    State <= DM_State;
+    //not much needs to be done here, as the ALU handles it all, however we need the clock cycle.
+    State <= DataAccess_State;
     end
-    DM_State: begin
-    State <= IM_State;
+    DataAccess_State: begin
+    //First, let's determine the next value of the program counter as we have the zero output now.
+    case((zero*Branch))
+        1'b0: begin //Add 4 and call it a day.
+        PC <= PC + 'h4;
+        end
+        1'b1: begin //Add Instruction [31:0] to the current value
+        PC <= PC + Instruction[31:0];
+        end
+    endcase
+    case(MemtoReg)
+        1'b0: begin //Write ALU Result to Register Write Data
+        RegWriteData <= ALUResult;
+        end
+        1'b1: begin //Write Memory Read Data to Register Write Data
+        RegWriteData <= DMDataRead;
+        end
+    endcase
+    State <= Register_State2;
+    end
+    Register_State2: begin
+    //We need this clock cycle to write the Write Data to the Register
+    State <= InstructionFetch_State;
     end
 endcase
 
