@@ -23,13 +23,13 @@
 module CPU(CLK, PC, State, RegReadData1, RegReadData2, RegIn2, RegWriteData, ALUin2, ALUResult, zero, DMWriteData, DMDataRead);
 input wire CLK;
 output reg[7:0] State;
-output reg[63:0] PC;
+output reg[31:0] PC;
 reg Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp1,ALUOp0;
 reg[3:0] ALUControl;
 reg[10:0] OpCode;
 parameter InstructionFetch_State='h0, Register_State='h1, ALU_State='h2, DataAccess_State='h3, Register_State2='h4;
 //Add Instruction Memory:
-wire [63:0]Instruction;
+wire [31:0]Instruction;
 InstructionMemory IM(
 .ReadAddress(PC),
  .Instruction(Instruction));
@@ -40,9 +40,9 @@ InstructionMemory IM(
 
 
 //Add Registers file:
-output reg[63:0] RegWriteData;
+output reg[31:0] RegWriteData;
 output reg[4:0] RegIn2;
-output wire[63:0] RegReadData1,RegReadData2;
+output wire[31:0] RegReadData1,RegReadData2;
 Registers register(
 .RegWriteControl(RegWrite),
 .RegWriteData(RegWriteData),
@@ -60,7 +60,7 @@ Registers register(
 
 //Add ALU:
 output reg[63:0] ALUin2;
-output wire[63:0] ALUResult;
+output wire[31:0] ALUResult;
 output wire zero;
 ALU ALU(
 .a(RegReadData1), 
@@ -77,8 +77,8 @@ ALU ALU(
 
 
 //Add Data Memory:
-output reg[63:0] DMWriteData;
-output wire[63:0] DMDataRead;
+output reg[31:0] DMWriteData;
+output wire[31:0] DMDataRead;
 DataMemory DM(.Address(ALUResult),.WriteData(RegReadData2),.MemWrite(MemWrite),.MemRead(MemRead),.DataRead(DMDataRead), .CLK(CLK));
 
 // Address will be the address input to read or write data to/from
@@ -87,23 +87,23 @@ DataMemory DM(.Address(ALUResult),.WriteData(RegReadData2),.MemWrite(MemWrite),.
 
 initial begin
 State = InstructionFetch_State;
-PC = 'h00000000;
+PC = 'h0000;
 end
 always @(posedge CLK) begin
 case(State)
     InstructionFetch_State: begin
     //We've retrieved the Instruction as of this clock cycle. Setting Flags...
-    Reg2Loc <= Instruction[63];
-    ALUSrc <= Instruction[62];
-    MemtoReg <= Instruction[61];
-    RegWrite <= Instruction[60];
-    MemRead <= Instruction[59];
-    MemWrite <= Instruction[58];
-    Branch <= Instruction[57];
-    ALUOp1 <= Instruction[56];
-    ALUOp0 <= Instruction[55];
+    Reg2Loc <= Instruction[31];
+    ALUSrc <= Instruction[30];
+    MemtoReg <= Instruction[29];
+    RegWrite <= Instruction[28];
+    MemRead <= Instruction[27];
+    MemWrite <= Instruction[26];
+    Branch <= Instruction[25];
+    ALUOp1 <= Instruction[24];
+    ALUOp0 <= Instruction[23];
     //Selecting OpCode part from the instruction
-    OpCode <= Instruction[54:44];
+//    OpCode <= Instruction[54:44];
     //Setting the next state
     State <= Register_State;
         //Determine the input to Read Register 2 (2x1 MUX Simulation)
@@ -151,7 +151,7 @@ case(State)
         //Need to determine the second ALU input:
         case(ALUSrc)
             1'b0: begin //Input should be Read Data 2
-            ALUin2 <= RegReadData2;
+            ALUin2 <= ('h00000000 + RegReadData2);
             end
             1'b1: begin //Input should be Sign Extended Instruction [31:0]
             ALUin2 <= ('h00000000 + Instruction[31:0]);
