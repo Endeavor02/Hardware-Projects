@@ -31,17 +31,16 @@ module InstructionMemory(
 input wire [31:0]ReadAddress,
 output wire [31:0]Instruction
 );
-reg[31:0] InstructionMemory[127:0];
+reg[31:0] InstructionMemory[63:0];
 initial begin
-InstructionMemory[0] = 32'b00000000001000000000000000000001;
-InstructionMemory[1] = 32'b00000000010000000000110000100001;
-InstructionMemory[2] = 32'b00000000010000000000000001000001;
-InstructionMemory[3] = 'h0000;
-InstructionMemory[4] = 'h0000;
-InstructionMemory[5] = 'h0000;
-InstructionMemory[6] = 'h0000;
+InstructionMemory[0] = 32'b00000000001000000000000100000000;
+InstructionMemory[4] = 32'b10001011000000000000000000000001;
+InstructionMemory[8] = 32'b10001010000000000000000000100010;
+InstructionMemory[12] = 32'b11001011000000100000000000000011;
+InstructionMemory[16] = 32'b00000000100000000000000000000001;
+InstructionMemory[20] = 32'b00000000011000000000000000001000;
+InstructionMemory[52] = 32'b10101010000000010000000001100100;
+InstructionMemory[56] = 32'b00000000010000000000000000101000;
 end
-
-
-assign Instruction = InstructionMemory[ReadAddress];
+assign Instruction = InstructionMemory[ReadAddress[6:0]];
 endmodule

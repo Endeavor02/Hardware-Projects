@@ -53,9 +53,9 @@ input wire [31:0]RegWriteData;
 input wire CLK;
 reg[31:0] registers[31:0];
 initial begin
-registers[0] = 'h001F;
+registers[0] = 'h0000;
 registers[1] = 'h0000;
-registers[2] = 32'b11111111111111111111111111000000;
+registers[2] = 'h0000;
 registers[3] = 'h0000;
 registers[4] = 'h0000;
 registers[5] = 'h0000;
@@ -69,6 +69,7 @@ registers[12] = 'h0000;
 registers[13] = 'h0000;
 registers[14] = 'h0000;
 registers[15] = 'h0000;
+registers[16] = 'h0000;
 //etc...
 end
 //Read Register Section (Async)

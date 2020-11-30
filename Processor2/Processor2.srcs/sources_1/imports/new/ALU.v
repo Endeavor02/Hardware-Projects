@@ -72,6 +72,9 @@ case(ALUControl)
     ALUresult = ~(a | b);
     zero = ~(~(a | b) > 0);
     end
+    default: begin
+    zero = 0;
+    end
 endcase
 
 

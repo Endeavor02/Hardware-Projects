@@ -58,7 +58,7 @@ MemWrite = 0;
 CLK = 1; //Should now output the value we wrote previously.
 #1;
 CLK = 0;
-Address = 'h0001;
+Address = 'haaa0001;
 MemRead = 1;
 MemWrite = 1;
 WriteData = 'haaaa;

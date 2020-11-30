@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CPU(CLK, PC, State, RegReadData1, RegReadData2, RegIn2, RegWriteData, ALUin2, ALUResult, zero, DMWriteData, DMDataRead);
+module CPU(CLK);
 input wire CLK;
-output reg[7:0] State;
-output reg[31:0] PC;
+reg[7:0] State;
+reg[31:0] PC;
 reg Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp1,ALUOp0,Unconditional;
 reg[3:0] ALUControl;
 reg[10:0] OpCode;
-parameter InstructionFetch_State='h0, Register_State='h1, ALU_State='h2, DataAccess_State='h3, Register_State2='h4;
+parameter InstructionFetch_State='h0, Register_State='h1, ALU_State='h2, DataAccess_State='h3, Register_State2='h4, Extra_State='h5;
 //Add Instruction Memory:
 wire [31:0]Instruction;
 InstructionMemory IM(
@@ -40,9 +40,9 @@ InstructionMemory IM(
 
 
 //Add Registers file:
-output reg[31:0] RegWriteData;
-output reg[4:0] RegIn2;
-output wire[31:0] RegReadData1,RegReadData2;
+reg[31:0] RegWriteData;
+reg[4:0] RegIn2;
+wire[31:0] RegReadData1,RegReadData2;
 Registers register(
 .RegWriteControl(RegWrite),
 .RegWriteData(RegWriteData),
@@ -59,11 +59,11 @@ Registers register(
 
 
 //Add ALU:
-output reg[63:0] ALUin2;
-output wire[31:0] ALUResult;
-output wire zero;
+reg[63:0] ALUin2,ALUin1;
+wire[63:0] ALUResult;
+wire zero;
 ALU ALU(
-.a(RegReadData1), 
+.a(ALUin1), 
 .b(ALUin2), 
 .ALUControl(ALUControl), 
 .ALUresult(ALUResult), 
@@ -77,8 +77,8 @@ ALU ALU(
 
 
 //Add Data Memory:
-output reg[31:0] DMWriteData;
-output wire[31:0] DMDataRead;
+reg[31:0] DMWriteData;
+wire[31:0] DMDataRead;
 DataMemory DM(.Address(ALUResult),.WriteData(RegReadData2),.MemWrite(MemWrite),.MemRead(MemRead),.DataRead(DMDataRead), .CLK(CLK));
 
 // Address will be the address input to read or write data to/from
@@ -118,7 +118,7 @@ case(State)
             ALUOp0 <= 1'b0;
             Unconditional <= 1'b0;
         end
-        11'b1000101000: begin //AND
+        11'b10001010000: begin //AND
             Reg2Loc <= 1'b0;
             ALUSrc <= 1'b0;
             MemtoReg <= 1'b0;
@@ -209,8 +209,8 @@ case(State)
     State <= Register_State;
         //Determine the input to Read Register 2 (2x1 MUX Simulation)
         case(Instruction[31]) //This bit is only high when it's an r-type instruction.
-        1'b0: RegIn2 <= Instruction[20:16]; //set to Rm
-        1'b1: RegIn2 <= Instruction[4:0]; //set to Rd
+        1'b1: RegIn2 <= Instruction[20:16]; //set to Rm
+        1'b0: RegIn2 <= Instruction[4:0]; //set to Rd
         endcase
     end
     Register_State: begin
@@ -249,13 +249,14 @@ case(State)
                 endcase
             end
         endcase
-        //Need to determine the second ALU input:
+        //Need to determine the ALU inputs:
+        ALUin1 = 'h0000000 + RegReadData1;
         case(ALUSrc)
             1'b0: begin //Input should be Read Data 2
-            ALUin2 <= ('h0000 + RegReadData2);
+            ALUin2 = ('h00000000 + RegReadData2);
             end
             1'b1: begin //Input should be Sign Extended Instruction [31:0]
-            ALUin2 <= ('h0000 + Instruction[31:0]);
+            ALUin2 = ('h00000000 + Instruction[21:0]);
             end
         endcase
     State <= ALU_State;
@@ -265,15 +266,6 @@ case(State)
     State <= DataAccess_State;
     end
     DataAccess_State: begin
-    //First, let's determine the next value of the program counter as we have the zero output now.
-    case((zero*Branch)|Unconditional)
-        1'b0: begin //Add 4 and call it a day.
-        PC <= PC + 'h4;
-        end
-        1'b1: begin //Add Shifted Instruction [31:0] to the current value
-        PC <= PC + (Instruction[31:0] << 2);
-        end
-    endcase
     case(MemtoReg)
         1'b0: begin //Write ALU Result to Register Write Data
         RegWriteData <= ALUResult;
@@ -286,6 +278,39 @@ case(State)
     end
     Register_State2: begin
     //We need this clock cycle to write the Write Data to the Register
+                //First, let's determine the next value of the program counter as we have the zero output now.
+        case(Unconditional)
+            1'b0: begin //Unconditional flag not set
+            case(zero)
+                1'b0: begin
+                    PC <= PC + 'h4;
+                end
+                1'bx: begin
+                    PC <= PC + 'h4;
+                end
+                1'b1: begin
+                    case(Branch)
+                        1'b0: begin
+                            PC <= PC + 'h4;
+                        end
+                        1'b1: begin//Add Shifted Instruction [21:0] to the current value
+                            PC <= PC + (Instruction[21:0] << 2);
+                        end
+                    endcase
+                end
+            1'b1: begin//Add Shifted Instruction [31:0] to the current value
+                PC <= PC + (Instruction[31:0] << 2);
+            end
+        endcase
+        end
+        1'b1: begin //Add Shifted Instruction [31:0] to the current value
+        PC <= PC + (Instruction[31:0] << 2);
+        end
+    endcase
+    State <= Extra_State;
+    end
+    Extra_State: begin
+    //This state is simply because the hardware needs the extra clock cycle to catch up before adding a new instruction.
     State <= InstructionFetch_State;
     end
 endcase

@@ -9,6 +9,7 @@ verilog xil_defaultlib  \
 "../../../../Processor2.srcs/sim_1/new/CPU_TB.v" \
 "../../../../Processor2.srcs/sim_1/new/IM_TB.v" \
 "../../../../Processor2.srcs/sim_1/new/DM_TB.v" \
+"../../../../Processor2.srcs/sim_1/imports/new/TB.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

@@ -22,19 +22,19 @@
 
 module CPU_TB;
 reg CLK;
-wire zero;
-wire[4:0] RegIn2;
-wire[7:0] State;
-wire[31:0] PC, RegReadData1, RegReadData2, RegWriteData, ALUin2, ALUResult, DMWriteData, DMDataRead;
-CPU processor(CLK, PC, State, RegReadData1, RegReadData2, RegIn2, RegWriteData, ALUin2, ALUResult, zero, DMWriteData, DMDataRead);
+CPU processor(CLK);
 
 integer i;
 
 initial begin
 CLK = 0;
 #1;
-    for (i = 0; i< 3; i = i + 1) begin
+    for (i = 0; i< 8; i = i + 1) begin
         $display("Instruction#%0d",i);
+        CLK = 1;
+        #1;
+        CLK = 0;
+        #1;
         CLK = 1;
         #1;
         CLK = 0;

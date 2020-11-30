@@ -39,14 +39,15 @@ input wire MemRead,
 output reg[31:0] DataRead,
 input wire CLK
     );
-reg[31:0] Memory[31:0];
+reg[31:0] Memory[63:0];
 initial begin
-Memory[31] = 32'b0001;
+Memory[0] = 'haefb;
 end
 always @(posedge CLK) begin
 if (MemWrite == 1'b1)
-    Memory[Address] <= WriteData;
-if (MemRead == 1'b1)
-    DataRead <= Memory[Address];
+    Memory[Address[6:0]] <= WriteData;
+if (MemRead == 1'b1) begin
+    DataRead <= Memory[Address[6:0]];
+end    
 end
 endmodule
