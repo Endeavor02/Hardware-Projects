@@ -21,19 +21,19 @@
 
 
 module DM_TB;
-reg[63:0] Address;
-reg[63:0] WriteData;
+reg[31:0] Address;
+reg[31:0] WriteData;
 reg MemWrite;
 reg MemRead;
-wire[63:0] DataRead;
+wire[31:0] DataRead;
 reg CLK;
 
 DataMemory mem(Address, WriteData, MemWrite,MemRead, DataRead, CLK);
 
 initial begin
 //Concurrently determine if both functions work properly:
-Address = 'h00000000;
-WriteData = 'hffff0000;
+Address = 'h0000;
+WriteData = 'hffff;
 CLK = 0;
 MemWrite = 0;
 MemRead = 0;
@@ -58,10 +58,10 @@ MemWrite = 0;
 CLK = 1; //Should now output the value we wrote previously.
 #1;
 CLK = 0;
-Address = 'h00000001;
+Address = 'h0001;
 MemRead = 1;
 MemWrite = 1;
-WriteData = 'haaaaaaaa;
+WriteData = 'haaaa;
 #1;
 CLK = 1; //Should write (and read?[No, since it reads and writes at the same time it will write the data but cannot read until the next clock.]) the value from WriteData to memory location 1
 #1;

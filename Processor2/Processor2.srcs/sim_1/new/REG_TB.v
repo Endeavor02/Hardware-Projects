@@ -26,8 +26,8 @@
 module REG_TB;
 reg RegWriteControl;
 reg [4:0]RegIn1,RegIn2,RegWriteNum;
-wire [63:0]RegReadData1,RegReadData2;
-reg [63:0]RegWriteData;
+wire [31:0]RegReadData1,RegReadData2;
+reg [31:0]RegWriteData;
 reg CLK;
 Registers rgstr(RegWriteControl, RegWriteData, RegIn1, RegIn2, RegWriteNum, RegReadData1, RegReadData2, CLK);
 initial begin
@@ -47,13 +47,13 @@ RegIn1 = 5'b10000;
 RegIn2 = 5'b01111;
 #1;
 RegWriteControl = 1'b1;
-RegWriteData = 'heeeeeeee;
+RegWriteData = 'heeee;
 RegWriteNum = 5'b10000;
 CLK = 1;
 #1;
 CLK = 0;
 #1;
-RegWriteData = 'h2222334f;
+RegWriteData = 'h334f;
 RegWriteNum = 5'b01111;
 CLK = 1;
 #1

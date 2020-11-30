@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Nov 30 10:58:40 2020
+# Process ID: 936
+# Current directory: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2996 C:\Users\jblan\Documents\GitHub\Hardware-Projects\Processor2\Processor2.xpr
+# Log file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/vivado.log
+# Journal file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 1212.445 ; gain = 0.000
+exexit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 30 11:21:53 2020...

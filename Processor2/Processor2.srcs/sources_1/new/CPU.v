@@ -24,7 +24,7 @@ module CPU(CLK, PC, State, RegReadData1, RegReadData2, RegIn2, RegWriteData, ALU
 input wire CLK;
 output reg[7:0] State;
 output reg[31:0] PC;
-reg Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp1,ALUOp0;
+reg Reg2Loc,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp1,ALUOp0,Unconditional;
 reg[3:0] ALUControl;
 reg[10:0] OpCode;
 parameter InstructionFetch_State='h0, Register_State='h1, ALU_State='h2, DataAccess_State='h3, Register_State2='h4;
@@ -92,22 +92,123 @@ end
 always @(posedge CLK) begin
 case(State)
     InstructionFetch_State: begin
-    //We've retrieved the Instruction as of this clock cycle. Setting Flags...
-    Reg2Loc <= Instruction[31];
-    ALUSrc <= Instruction[30];
-    MemtoReg <= Instruction[29];
-    RegWrite <= Instruction[28];
-    MemRead <= Instruction[27];
-    MemWrite <= Instruction[26];
-    Branch <= Instruction[25];
-    ALUOp1 <= Instruction[24];
-    ALUOp0 <= Instruction[23];
+    //We've retrieved the Instruction as of this clock cycle. Setting Flags...(Control)
+    case(Instruction[31:21])
+        11'b10001011000: begin //ADD
+            Reg2Loc <= 1'b0;
+            ALUSrc <= 1'b0;
+            MemtoReg <= 1'b0;
+            RegWrite <= 1'b1;
+            MemRead <= 1'b0;
+            MemWrite <= 1'b0;
+            Branch <= 1'b0;
+            ALUOp1 <= 1'b1;
+            ALUOp0 <= 1'b0;
+            Unconditional <= 1'b0;
+        end
+        11'b11001011000: begin //SUB
+            Reg2Loc <= 1'b0;
+            ALUSrc <= 1'b0;
+            MemtoReg <= 1'b0;
+            RegWrite <= 1'b1;
+            MemRead <= 1'b0;
+            MemWrite <= 1'b0;
+            Branch <= 1'b0;
+            ALUOp1 <= 1'b1;
+            ALUOp0 <= 1'b0;
+            Unconditional <= 1'b0;
+        end
+        11'b1000101000: begin //AND
+            Reg2Loc <= 1'b0;
+            ALUSrc <= 1'b0;
+            MemtoReg <= 1'b0;
+            RegWrite <= 1'b1;
+            MemRead <= 1'b0;
+            MemWrite <= 1'b0;
+            Branch <= 1'b0;
+            ALUOp1 <= 1'b1;
+            ALUOp0 <= 1'b0;
+            Unconditional <= 1'b0;
+        end
+        11'b10101010000: begin //OR
+            Reg2Loc <= 1'b0;
+            ALUSrc <= 1'b0;
+            MemtoReg <= 1'b0;
+            RegWrite <= 1'b1;
+            MemRead <= 1'b0;
+            MemWrite <= 1'b0;
+            Branch <= 1'b0;
+            ALUOp1 <= 1'b1;
+            ALUOp0 <= 1'b0;
+            Unconditional <= 1'b0;
+        end
+        11'b00000000001: begin //LDUR
+            Reg2Loc <= 1'b0;
+            ALUSrc <= 1'b1;
+            MemtoReg <= 1'b1;
+            RegWrite <= 1'b1;
+            MemRead <= 1'b1;
+            MemWrite <= 1'b0;
+            Branch <= 1'b0;
+            ALUOp1 <= 1'b0;
+            ALUOp0 <= 1'b0;
+            Unconditional <= 1'b0;
+        end
+        11'b000000000010: begin //STUR
+            Reg2Loc <= 1'b1;
+            ALUSrc <= 1'b1;
+            MemtoReg <= 1'b0;
+            RegWrite <= 1'b0;
+            MemRead <= 1'b0;
+            MemWrite <= 1'b1;
+            Branch <= 1'b0;
+            ALUOp1 <= 1'b0;
+            ALUOp0 <= 1'b0;
+            Unconditional <= 1'b0;
+        end
+        11'b00000000011: begin //CBZ
+            Reg2Loc <= 1'b1;
+            ALUSrc <= 1'b0;
+            MemtoReg <= 1'b0;
+            RegWrite <= 1'b0;
+            MemRead <= 1'b0;
+            MemWrite <= 1'b0;
+            Branch <= 1'b1;
+            ALUOp1 <= 1'b0;
+            ALUOp0 <= 1'b1;
+            Unconditional <= 1'b0;
+        end
+        11'b00000000100: begin //B
+            Reg2Loc <= 1'b1;
+            ALUSrc <= 1'b0;
+            MemtoReg <= 1'b0;
+            RegWrite <= 1'b0;
+            MemRead <= 1'b0;
+            MemWrite <= 1'b0;
+            Branch <= 1'b0;
+            ALUOp1 <= 1'b0;
+            ALUOp0 <= 1'b1;
+            Unconditional <= 1'b1;
+        end
+        default: begin
+            Reg2Loc <= 1'b0;
+            ALUSrc <= 1'b0;
+            MemtoReg <= 1'b0;
+            RegWrite <= 1'b0;
+            MemRead <= 1'b1;
+            MemWrite <= 1'b0;
+            Branch <= 1'b0;
+            ALUOp1 <= 1'b0;
+            ALUOp0 <= 1'b0;
+            Unconditional <= 1'b0;
+        end
+    endcase
     //Selecting OpCode part from the instruction
-//    OpCode <= Instruction[54:44];
+    OpCode <= Instruction[31:21];
     //Setting the next state
     State <= Register_State;
         //Determine the input to Read Register 2 (2x1 MUX Simulation)
-        case(Instruction[63])
+        case(Instruction[31]) //This bit is only high when it's an r-type instruction.
         1'b0: RegIn2 <= Instruction[20:16]; //set to Rm
         1'b1: RegIn2 <= Instruction[4:0]; //set to Rd
         endcase
@@ -151,10 +252,10 @@ case(State)
         //Need to determine the second ALU input:
         case(ALUSrc)
             1'b0: begin //Input should be Read Data 2
-            ALUin2 <= ('h00000000 + RegReadData2);
+            ALUin2 <= ('h0000 + RegReadData2);
             end
             1'b1: begin //Input should be Sign Extended Instruction [31:0]
-            ALUin2 <= ('h00000000 + Instruction[31:0]);
+            ALUin2 <= ('h0000 + Instruction[31:0]);
             end
         endcase
     State <= ALU_State;
@@ -165,12 +266,12 @@ case(State)
     end
     DataAccess_State: begin
     //First, let's determine the next value of the program counter as we have the zero output now.
-    case((zero*Branch))
+    case((zero*Branch)|Unconditional)
         1'b0: begin //Add 4 and call it a day.
         PC <= PC + 'h4;
         end
-        1'b1: begin //Add Instruction [31:0] to the current value
-        PC <= PC + Instruction[31:0];
+        1'b1: begin //Add Shifted Instruction [31:0] to the current value
+        PC <= PC + (Instruction[31:0] << 2);
         end
     endcase
     case(MemtoReg)

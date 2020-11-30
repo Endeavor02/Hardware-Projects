@@ -48,27 +48,27 @@ RegReadData2,
 CLK);
 input wire RegWriteControl;
 input wire [4:0]RegIn1,RegIn2,RegWriteNum;
-output wire [63:0]RegReadData1,RegReadData2;
-input wire [63:0]RegWriteData;
+output wire [31:0]RegReadData1,RegReadData2;
+input wire [31:0]RegWriteData;
 input wire CLK;
-reg[63:0] registers[31:0];
+reg[31:0] registers[31:0];
 initial begin
-registers[0] = 'h00000000;
-registers[1] = 'hffffffff;
-registers[2] = 'h00000002;
-registers[3] = 'h00000003;
-registers[4] = 'h00000004;
-registers[5] = 'h0000e00f;
-registers[6] = 'h00000000;
-registers[7] = 'hffffffff;
-registers[8] = 'h11111111;
-registers[9] = 'h00000000;
-registers[10] = 'h00000000;
-registers[11] = 'h00000000;
-registers[12] = 'h00000000;
-registers[13] = 'h00000000;
-registers[14] = 'h00000000;
-registers[15] = 'h00000000;
+registers[0] = 'h001F;
+registers[1] = 'h0000;
+registers[2] = 32'b11111111111111111111111111000000;
+registers[3] = 'h0000;
+registers[4] = 'h0000;
+registers[5] = 'h0000;
+registers[6] = 'h0000;
+registers[7] = 'h0000;
+registers[8] = 'h0000;
+registers[9] = 'h0000;
+registers[10] = 'h0000;
+registers[11] = 'h0000;
+registers[12] = 'h0000;
+registers[13] = 'h0000;
+registers[14] = 'h0000;
+registers[15] = 'h0000;
 //etc...
 end
 //Read Register Section (Async)

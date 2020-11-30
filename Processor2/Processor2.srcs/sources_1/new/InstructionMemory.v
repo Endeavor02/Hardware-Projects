@@ -28,18 +28,18 @@
 
 
 module InstructionMemory(
-input wire [63:0]ReadAddress,
-output wire [63:0]Instruction
+input wire [31:0]ReadAddress,
+output wire [31:0]Instruction
 );
-reg[63:0] InstructionMemory[63:0];
+reg[31:0] InstructionMemory[127:0];
 initial begin
-InstructionMemory[0] = 'h00000000;
-InstructionMemory[1] = 'h00000001;
-InstructionMemory[2] = 'h00000002;
-InstructionMemory[3] = 'h00000003;
-InstructionMemory[4] = 'h00000004;
-InstructionMemory[5] = 'h00000005;
-InstructionMemory[6] = 'hF000B00A;
+InstructionMemory[0] = 32'b00000000001000000000000000000001;
+InstructionMemory[1] = 32'b00000000010000000000110000100001;
+InstructionMemory[2] = 32'b00000000010000000000000001000001;
+InstructionMemory[3] = 'h0000;
+InstructionMemory[4] = 'h0000;
+InstructionMemory[5] = 'h0000;
+InstructionMemory[6] = 'h0000;
 end
 
 

@@ -27,26 +27,26 @@
 
 
 module IM_TB;
-reg [63:0]ReadAddress;
-wire [63:0]Instruction;
+reg [31:0]ReadAddress;
+wire [31:0]Instruction;
 InstructionMemory IM(ReadAddress, Instruction);
 initial begin
 #1
-ReadAddress = 'h00000000;
+ReadAddress = 'h0000;
 #1
-ReadAddress = 'h00000001;
+ReadAddress = 'h0001;
 #1
-ReadAddress = 'h00000002;
+ReadAddress = 'h0002;
 #1
-ReadAddress = 'h00000003;
+ReadAddress = 'h0003;
 #1
-ReadAddress = 'h00000004;
+ReadAddress = 'h0004;
 #1
-ReadAddress = 'h00000005;
+ReadAddress = 'h0005;
 #1
-ReadAddress = 'h00000006;
+ReadAddress = 'h0006;
 #1
-ReadAddress = 'h00000007;
+ReadAddress = 'h0007;
 
 end
 endmodule

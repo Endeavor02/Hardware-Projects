@@ -25,7 +25,7 @@ reg CLK;
 wire zero;
 wire[4:0] RegIn2;
 wire[7:0] State;
-wire[63:0] PC, RegReadData1, RegReadData2, RegWriteData, ALUin2, ALUResult, DMWriteData, DMDataRead;
+wire[31:0] PC, RegReadData1, RegReadData2, RegWriteData, ALUin2, ALUResult, DMWriteData, DMDataRead;
 CPU processor(CLK, PC, State, RegReadData1, RegReadData2, RegIn2, RegWriteData, ALUin2, ALUResult, zero, DMWriteData, DMDataRead);
 
 integer i;
@@ -33,7 +33,7 @@ integer i;
 initial begin
 CLK = 0;
 #1;
-    for (i = 0; i< 1; i = i + 1) begin
+    for (i = 0; i< 3; i = i + 1) begin
         $display("Instruction#%0d",i);
         CLK = 1;
         #1;

@@ -32,23 +32,21 @@
 
 
 module DataMemory(
-input wire[63:0] Address,
-input wire[63:0] WriteData,
+input wire[31:0] Address,
+input wire[31:0] WriteData,
 input wire MemWrite,
 input wire MemRead,
-output reg[63:0] DataRead,
+output reg[31:0] DataRead,
 input wire CLK
     );
-reg[63:0] Memory[63:0];
-
+reg[31:0] Memory[31:0];
+initial begin
+Memory[31] = 32'b0001;
+end
 always @(posedge CLK) begin
 if (MemWrite == 1'b1)
     Memory[Address] <= WriteData;
 if (MemRead == 1'b1)
     DataRead <= Memory[Address];
 end
-    
-    
-    
-    
 endmodule

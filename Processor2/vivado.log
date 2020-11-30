@@ -2,10 +2,10 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Nov 30 10:58:40 2020
-# Process ID: 936
+# Start of session at: Mon Nov 30 11:24:29 2020
+# Process ID: 2636
 # Current directory: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2996 C:\Users\jblan\Documents\GitHub\Hardware-Projects\Processor2\Processor2.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20576 C:\Users\jblan\Documents\GitHub\Hardware-Projects\Processor2\Processor2.xpr
 # Log file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/vivado.log
 # Journal file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2\vivado.jou
 #-----------------------------------------------------------
@@ -15,7 +15,905 @@ Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
-open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 1212.445 ; gain = 0.000
-exexit
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 30 11:21:53 2020...
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 32 for port 'PC' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim/xsim.dir/CPU_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim/xsim.dir/CPU_TB_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Nov 30 12:16:57 2020. For additional details about this file, please refer to the WebTalk help file at D:/Vivado/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Nov 30 12:16:57 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 936.391 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Instruction#0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 936.391 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4 ns
+Instruction#0
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUin2' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Instruction#0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4 ns
+Instruction#0
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUin2' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+FATAL_ERROR: Vivado Simulator kernel has discovered an exceptional condition from which it cannot recover. Process will terminate. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+Time: 0 ps  Iteration: 0  Process: /CPU_TB/processor/IM/NetRegassign46_15
+  File: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v
+
+HDL Line: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v:46
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 936.391 ; gain = 0.000
+run 4 ns
+ERROR: [Simulator 45-1] A fatal run-time error was detected.  Simulation cannot continue.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUin2' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+FATAL_ERROR: Vivado Simulator kernel has discovered an exceptional condition from which it cannot recover. Process will terminate. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+Time: 0 ps  Iteration: 0  Process: /CPU_TB/processor/IM/NetRegassign46_15
+  File: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v
+
+HDL Line: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v:46
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 936.391 ; gain = 0.000
+run 4 ns
+ERROR: [Simulator 45-1] A fatal run-time error was detected.  Simulation cannot continue.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUin2' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ERROR: Size of the dynamic array dimension is -2147483648. It cannot be a negative number.
+Time: 0 ps  Iteration: 0  Process: /CPU_TB/processor/IM/Initial34_1
+  File: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v
+
+HDL Line: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v:34
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 936.391 ; gain = 0.000
+run 4 ns
+ERROR: [Simulator 45-1] A fatal run-time error was detected.  Simulation cannot continue.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUin2' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Instruction#0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 936.391 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4 ns
+Instruction#0
+run 4 ns
+run 4 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUin2' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Instruction#0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 936.391 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4 ns
+Instruction#0
+run 4 ns
+run 4 ns
+run 4 ns
+run 4 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUin2' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Instruction#0
+Instruction#1
+Instruction#2
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 936.391 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4 ns
+Instruction#0
+run 4 ns
+run 4 ns
+Instruction#1
+run 4 ns
+run 4 ns
+run 4 ns
+Instruction#2
+run 4 ns
+run 4 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUin2' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Instruction#0
+Instruction#1
+Instruction#2
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 936.391 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4 ns
+Instruction#0
+run 4 ns
+run 4 ns
+Instruction#1
+run 4 ns
+run 4 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_TB_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/imports/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/DataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/InstructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/Registers.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Registers
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/REG_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module REG_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/IM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/DM_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DM_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/imports/new/TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+"xelab -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto ffe16b907ee14f37a56995170d36612f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot CPU_TB_behav xil_defaultlib.CPU_TB xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUin2' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sim_1/new/CPU_TB.v:29]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'a' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'ALUresult' [C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.srcs/sources_1/new/CPU.v:69]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_TB
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "CPU_TB_behav -key {Behavioral:sim_1:Functional:CPU_TB} -tclbatch {CPU_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source CPU_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Instruction#0
+Instruction#1
+Instruction#2
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'CPU_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 936.391 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 4 ns
+Instruction#0
+run 4 ns
+run 4 ns
+Instruction#1
+run 4 ns
+run 4 ns
+run 4 ns
+Instruction#2
+run 4 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 30 13:10:22 2020...

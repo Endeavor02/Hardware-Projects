@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Nov 30 10:58:40 2020
+# Process ID: 936
+# Current directory: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2996 C:\Users\jblan\Documents\GitHub\Hardware-Projects\Processor2\Processor2.xpr
+# Log file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/vivado.log
+# Journal file: C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/jblan/Documents/GitHub/Hardware-Projects/Processor2/Processor2.xpr
+r
