@@ -19,7 +19,7 @@
       <NameColumnWidth column_width="137"></NameColumnWidth>
       <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
+   <WVObjectSize size="10" />
    <wvobject fp_name="/CPU_TB/CLK" type="logic">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
@@ -55,30 +55,6 @@
    <wvobject fp_name="/CPU_TB/processor/register/registers[8]" type="array">
       <obj_property name="ElementShortName">[8][31:0]</obj_property>
       <obj_property name="ObjectShortName">[8][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TB/processor/ALU/a" type="array">
-      <obj_property name="ElementShortName">a[63:0]</obj_property>
-      <obj_property name="ObjectShortName">a[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TB/processor/ALU/b" type="array">
-      <obj_property name="ElementShortName">b[63:0]</obj_property>
-      <obj_property name="ObjectShortName">b[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TB/processor/ALU/ALUresult" type="array">
-      <obj_property name="ElementShortName">ALUresult[63:0]</obj_property>
-      <obj_property name="ObjectShortName">ALUresult[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TB/processor/ALU/ALUControl" type="array">
-      <obj_property name="ElementShortName">ALUControl[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ALUControl[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TB/processor/OpCode" type="array">
-      <obj_property name="ElementShortName">OpCode[10:0]</obj_property>
-      <obj_property name="ObjectShortName">OpCode[10:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/CPU_TB/processor/State" type="array">
-      <obj_property name="ElementShortName">State[7:0]</obj_property>
-      <obj_property name="ObjectShortName">State[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/CPU_TB/processor/DM/Memory[49]" type="array">
       <obj_property name="ElementShortName">[49][31:0]</obj_property>
